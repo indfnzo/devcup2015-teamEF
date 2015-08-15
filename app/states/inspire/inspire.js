@@ -3,7 +3,8 @@
 	// appends a new state to global states module
 	angular.module("app.states.inspire", [
 		// module dependencies
-		"ui.router"
+		"ui.router",
+		"restangular"
 
 	// state config
 	]).config(function($stateProvider) {
@@ -19,6 +20,16 @@
 		});
 
 	// state controller
-	}).controller("InspireCtrl", function() {
+	}).controller("InspireCtrl", function($scope, Restangular) {
+		// define a local store for post
+		$scope.post = {};
+
+		$scope.submit = function() {
+			// set current form as loading (todo)
+
+			// submit current scope's post to api
+			Restangular.all("posts").post($scope.post);
+			$scope.post = {};
+		};
 	});
 })();

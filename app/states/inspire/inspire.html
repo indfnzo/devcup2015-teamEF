@@ -1,5 +1,12 @@
 <div class="ui container">
 	Inspire
+	<form>
+		Title: <input type="text" ng-model="post.title"><br>
+		Content: <input type="text" ng-model="post.content"><br>
+		Author Name: <input type="text" ng-model="post.author_name"><br>
+		Author Gender: <input type="text" ng-model="post.author_gender"><br>
+		<input type="submit" ng-click="submit()" value="Submit">
+	</form>
 </div>
 
 <ui-view></ui-view>

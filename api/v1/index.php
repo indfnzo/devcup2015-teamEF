@@ -26,6 +26,7 @@
 
 	// -- load route files
 	include_once("routes/index.php");
+	include_once("routes/posts.php");
 
 	// -- execute Slim application
 	$app->run();
