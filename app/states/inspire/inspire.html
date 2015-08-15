@@ -7,6 +7,15 @@
 		Author Gender: <input type="text" ng-model="post.author_gender"><br>
 		<input type="submit" ng-click="submit()" value="Submit">
 	</form>
+
+	<div class="ui segment" ng-repeat="entry in posts | orderBy:'id':'true'">
+		id: {{entry.id}}<br>
+		title: {{entry.title}}<br>
+		content: {{entry.content}}<br>
+		author_name: {{entry.author_name}}<br>
+		author_gender: {{entry.author_gender}}<br>
+		create_timestamp: {{entry.create_timestamp}}<br><br>
+	</div>
 </div>
 
 <ui-view></ui-view>
