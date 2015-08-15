@@ -1,7 +1,7 @@
 (function() {
 
 	// appends a new state to global states module
-	angular.module("app.states", [
+	angular.module("app.states.home", [
 		// module dependencies
 		"ui.router"
 

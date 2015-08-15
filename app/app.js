@@ -6,7 +6,8 @@
 		"ui.router",
 		"ui.router.title",
 		"app.directives",
-		"app.states"
+		"app.states.home",
+		"app.states.inspire"
 	]);
 
 	// configure/init application
