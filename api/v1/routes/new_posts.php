@@ -14,8 +14,7 @@
 				"title" => $post["title"],
 				"content" => $post["content"],
 				"author_name" => $post["author_name"],
-				"author_gender" => $post["author_gender"],
-				"create_timestamp" => $post["create_timestamp"]
+				"author_gender" => $post["author_gender"]
 			);
 		}
 

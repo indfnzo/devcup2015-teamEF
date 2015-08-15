@@ -28,6 +28,8 @@
 	include_once("routes/index.php");
 	include_once("routes/posts.php");
 	include_once("routes/new_posts.php");
+	include_once("routes/shouts.php");
+	include_once("routes/new_shouts.php");
 
 	// -- execute Slim application
 	$app->run();
