@@ -52,3 +52,9 @@
 	box-shadow: none;
 	border: none;
 }
+
+/* global content styles */
+.form.disclaimer {
+	color: #808080;
+	font-size: 0.8rem;
+}

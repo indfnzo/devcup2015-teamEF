@@ -1,13 +1,13 @@
-<div class="ui container">
-	Inspire
-	<form>
-		Title: <input type="text" ng-model="post.title"><br>
-		Content: <input type="text" ng-model="post.content"><br>
-		Author Name: <input type="text" ng-model="post.author_name"><br>
-		Author Gender: <input type="text" ng-model="post.author_gender"><br>
-		<input type="submit" ng-click="submit()" value="Submit">
-	</form>
+<div class="ui text container">
+	<h1>Inspire</h1>
+	<h4>Inspire short tagline??</h4>
+	<div class="ui right aligned container">
+		<a ui-sref="compose" class="ui blue button">Submit Your Story</a>
+	</div>
+	<div class="ui divider"></div>
+</div>
 
+<div class="ui text container">
 	<div class="ui segment" ng-repeat="entry in posts | orderBy:'id':'true'">
 		id: {{entry.id}}<br>
 		title: {{entry.title}}<br>

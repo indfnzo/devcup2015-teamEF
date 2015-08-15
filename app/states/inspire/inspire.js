@@ -15,7 +15,7 @@
 			templateUrl: "app/states/inspire/inspire.html",
 			controller: "InspireCtrl",
 			resolve: {
-				$title: function() { return "Inspire"; }
+				$title: function() { return "Inspirational Stories"; }
 			}
 		});
 
@@ -51,16 +51,5 @@
 
 		// initialize resync cycle
 		beginResyncCycle();
-
-		// define a local store for the post currently being written
-		$scope.post = {};
-
-		$scope.submit = function() {
-			// set current form as loading (todo)
-
-			// submit current scope's post to api
-			Restangular.all("posts").post($scope.post);
-			$scope.post = {};
-		};
 	});
 })();

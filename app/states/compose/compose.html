@@ -1,0 +1,43 @@
+<div class="ui text container">
+	<h1>Submit Your Story</h1>
+	<h4>Been through blah blah? and blah blah</h4>
+	<h4>Inspire someone and blah blah blah. Submit your story below to blah blah blah</h4>
+	<div class="ui right aligned container">
+		<a ui-sref="inspire" class="ui button">View Stories</a>
+	</div>
+	<div class="ui divider"></div>
+
+	<br>
+	<div class="ui form segment">
+		<div class="field">
+			<input type="text" ng-model="post.title" placeholder="Summarize your story..." required>
+		</div>
+		<div class="field">
+			<textarea ng-model="post.content" placeholder="Tell the world about your own story!" required></textarea>
+		</div>
+
+		<h4>Optional Metadata</h4>
+		<div class="ui divider"></div>
+		<div class="two stackable fields">
+			<div class="ten wide field">
+				<input type="text" ng-model="post.author_name" placeholder="Your name">
+			</div>
+			<div class="six wide field">
+				<input type="text" ng-model="post.author_gender" placeholder="Your gender identity">
+			</div>
+		</div>
+
+		<br>
+		<div class="ui right aligned container field">
+			<button class="ui large blue submit button" ng-click="submit()">Submit Your Story</button>
+		</div>
+	</div>
+
+	<div class="ui center aligned container">
+		<p class="form disclaimer">
+			Posting inappropriate content is not tolerable by our system.<br>
+			Every submission is thoroughly reviewed before being published to the site.<br>
+		</p>
+	</div>
+	<br><br>
+</div>

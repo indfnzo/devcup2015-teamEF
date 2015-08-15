@@ -10,7 +10,8 @@
 		"app.states.home",
 		"app.states.consult",
 		"app.states.shout",
-		"app.states.inspire"
+		"app.states.inspire",
+		"app.states.compose"
 	]);
 
 	// configure/init application
