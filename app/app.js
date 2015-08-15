@@ -7,6 +7,7 @@
 		"ui.router.title",
 		"app.directives",
 		"app.states.home",
+		"app.states.consult",
 		"app.states.shout",
 		"app.states.inspire"
 	]);
