@@ -6,27 +6,36 @@
 	border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
+#global-nav .ui.basic.button {
+	border: none;
+	box-shadow: none;
+}
+
 #global-nav.ui.secondary.menu a.item,
 #global-nav.ui.secondary.menu a.item:hover {
 	background: transparent;
 	border-radius: 0px;
 	padding: 0px 1.5rem;
-	font-size: 1.14rem;
+	font-size: 1.2rem;
+	font-family: Roboto;
+	font-weight: 300;
+	text-transform: uppercase;
 	line-height: 100px;
-	transition: all 0.25s ease;
+	transition: all 0.15s ease;
 }
 
 #global-nav.ui.secondary.menu a.item:not(.header).active,
 #global-nav.ui.secondary.menu a.item:not(.header):hover {
-	background: rgba(0,0,0,0.05);
+	color: #FF66CC;
 }
 
 #global-nav.ui.secondary.menu a.item.header {
 	border: none;
 }
 
-#global-nav.ui.secondary.menu a.item.header:hover {
-	transform: scale(1.25);
+#global-nav.ui.secondary.menu a.item.header img {
+	height: 2.25rem;
+	width: auto;
 }
 
 #rainbow-band {
