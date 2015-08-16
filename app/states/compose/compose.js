@@ -20,7 +20,7 @@
 		});
 
 	// state controller
-	}).controller("ComposeCtrl", function($scope, Restangular, $window) {
+	}).controller("ComposeCtrl", function($scope, Restangular, $window, $state) {
 		// define a local store for the post currently being written
 		$scope.post = {};
 
@@ -31,6 +31,7 @@
 			$scope.post["content"] = $window.unescape($window.encodeURIComponent($scope.post["content"]));
 			Restangular.all("posts").post($scope.post);
 			$scope.post = {};
+			$state.transitionTo("inspire");
 		};
 	});
 })();
