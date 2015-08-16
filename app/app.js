@@ -6,6 +6,7 @@
 		"ui.router",
 		"ui.router.title",
 		"restangular",
+		"ngSanitize",
 		"app.directives",
 		"app.states.home",
 		"app.states.consult",
@@ -29,5 +30,15 @@
 
 	// application controller
 	app.controller("AppCtrl", function() {
+	});
+
+	// custom filters
+
+	// converts all newlines to html line breaks
+	app.filter("format", function() {
+		return function(content) {
+			if (!content) return content;
+			return content.replace(/\n\r?/g, "<br>");
+		}
 	});
 })();

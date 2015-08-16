@@ -54,7 +54,8 @@
 }
 
 /* global content styles */
-.form.disclaimer {
+.form.disclaimer,
+.post.meta {
 	color: #808080;
 	font-size: 0.8rem;
 }
