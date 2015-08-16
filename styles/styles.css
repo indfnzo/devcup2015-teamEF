@@ -63,6 +63,14 @@
 }
 
 /* global content styles */
+a, a:hover {
+	color: #FF66CC;
+}
+
+a:hover {
+	border-bottom: 1px dotted #FF66CC;
+}
+
 .form.disclaimer,
 .post.meta {
 	color: #808080;
