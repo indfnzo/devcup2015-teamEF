@@ -1,7 +1,7 @@
 (function() {
 
 	// define a new directive for the global navigation interface
-	angular.module("app.directives", []).directive("globalNav", function() {
+	angular.module("app.directives.globalNav", []).directive("globalNav", function() {
 		return {
 			restrict: "E",
 			templateUrl: "app/directives/globalNav/globalNav.html",

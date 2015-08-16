@@ -7,7 +7,8 @@
 	overflow: hidden;
 }
 
-#global-nav .ui.basic.button {
+#global-nav .ui.basic.button,
+#home-nav .ui.basic.button {
 	border: none;
 	box-shadow: none;
 }
@@ -80,10 +81,39 @@
 	opacity: 0.5;
 }
 
+#home-nav.ui.secondary.menu {
+	border-top: 5px solid #FF66CC;
+	transition: all 0.5s ease;
+}
+
+#home-nav.ui.secondary.menu:hover {
+	background: rgba(0,0,0,0.5);
+}
+
+#home-nav.ui.secondary.menu a.item,
+#home-nav.ui.secondary.menu a.item:hover {
+	background: transparent;
+	border-radius: 0px;
+	padding: 0px;
+	font-size: 1.2rem;
+	font-family: Roboto;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	line-height: 50px;
+	transition: all 0.15s ease;
+	color: #FF66CC;
+}
+
+#home-nav.ui.secondary.menu a.item:hover {
+	text-shadow: 0px 2px 2px rgba(0,0,0,0.75);
+	transform: scale(1.05);
+}
+
 /* global content styles */
 
 body {
-	background: #FAFAFA;
+	background: #FAFAFA url("http://subtlepatterns.com/patterns/paper_fibers.png") repeat scroll;
 }
 
 *:focus {
@@ -149,15 +179,54 @@ a:hover {
 
 /* homepage styles */
 
+#homepage {
+	background: url("../images/bgfinal.png") no-repeat fixed;
+	background-size: cover;
+}
+
 #homepage section {
+	background: rgba(0,0,0,0.5);
 	min-height: 100vh;
 }
 
+#homepage section:nth-of-type(3) {
+	background: rgba(0,0,0,0.25);
+}
+
 #homepage .masthead {
-	background: url("../images/bgfinal.png") no-repeat;
-	background-size: cover;
+	background: rgba(0,0,0,0.05);
 	padding-top: 100px;
 }
+
+#homepage #app-brand {
+	padding-top: 15vh;
+}
+
+#homepage #app-tagline {
+	font-size: 2.5em;
+	font-family: Roboto, sans-serif;
+	font-weight: 100;
+	padding-top: 5vh;
+}
+
+#homepage #app-tagline .highlight {
+	color: #FF66CC;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.25);
+}
+
+#homepage .subhead .title {
+	color: #FFFFFF;
+	font-size: 3em;
+	padding-top: 15vh;
+}
+
+#homepage .subhead .content {
+	color: #FFFFFF;
+	font-size: 1.2em;
+	padding-top: 5vh;
+}
+
+/* other page-specific styles */
 
 .ui.dividing.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 	color: #FF66CC;

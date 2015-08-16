@@ -9,10 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-	<!-- global navigation interface visible in all pages -->
-	<global-nav></global-nav>
-	<div class="global-nav spacer"></div>
-
 	<!-- yield content from state manager -->
 	<ui-view></ui-view>
 
@@ -27,6 +23,7 @@
 	<script type="text/javascript" src="vendor/restangular.min.js"></script>
 
 	<!-- import Angular scripts -->
+	<script type="text/javascript" src="app/directives/homeNav/homeNav.js"></script>
 	<script type="text/javascript" src="app/directives/globalNav/globalNav.js"></script>
 	<script type="text/javascript" src="app/states/home/home.js"></script>
 	<script type="text/javascript" src="app/states/consult/consult.js"></script>

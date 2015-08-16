@@ -1,3 +1,7 @@
+
+<!-- navigation menu -->
+<global-nav></global-nav>
+
 <div class="shout sectionhead">
 	<div class="ui text container">
 		<span class="section header">Shout</span >
@@ -16,7 +20,7 @@
 			</div>
 		</div>
 
-		<div class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
+		<div id="shout-segment" class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
 			<div class="item">
 				<div class="content">
 					<p>{{ entry.content }}</p>
