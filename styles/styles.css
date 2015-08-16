@@ -147,7 +147,7 @@ a:hover {
 #homepage .masthead {
 	background: url("../images/bgfinal.png") no-repeat;
 	background-size: cover;
-	padding-top: 150px;
+	padding-top: 100px;
 }
 
 .ui.dividing.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
