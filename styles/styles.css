@@ -72,6 +72,7 @@
 	background-size: 100%;
 	opacity: 0.6;
 	transition: all 0.25s ease;
+	z-index: 1000;
 }
 
 #global-nav:hover #rainbow-band {
