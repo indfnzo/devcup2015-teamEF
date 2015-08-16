@@ -79,13 +79,6 @@
 	opacity: 0.5;
 }
 
-.ui.placeholder.menu {
-	height: 8rem;
-	box-shadow: none;
-	border: none;
-	background: transparent;
-}
-
 /* global content styles */
 
 body {
@@ -117,5 +110,40 @@ a:hover {
 	font-weight: 900 !important;
 	font-size: 2rem;
 	text-align: left;
+}
+
+.sectionhead {
+	padding-top: 150px;
+}
+
+.consult.sectionhead {
+	background: url("../images/bg1.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.shout.sectionhead {
+	background: url("../images/bg2.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.inspire.sectionhead {
+	background: url("../images/bg3.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.compose.sectionhead {
+	background: url("../images/bg4.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+/* homepage styles */
+
+#homepage section {
+	min-height: 100vh;
+}
+
+#homepage .masthead {
+	background: url("../images/bgfinal.png") no-repeat;
+	background-size: cover;
 }
 
