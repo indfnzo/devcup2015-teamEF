@@ -26,6 +26,11 @@
 	transition: all 0.15s ease;
 }
 
+#global-nav.ui.secondary.menu.home-nav a.item,
+#global-nav.ui.secondary.menu.home-nav a.item:hover {
+	line-height: 60px;
+}
+
 #global-nav.ui.secondary.menu a.item:not(.header).active {
 	color: #FF66CC;
 }
@@ -84,10 +89,6 @@
 #home-nav.ui.secondary.menu {
 	border-top: 5px solid #FF66CC;
 	transition: all 0.5s ease;
-}
-
-#home-nav.ui.secondary.menu:hover {
-	background: rgba(0,0,0,0.5);
 }
 
 #home-nav.ui.secondary.menu a.item,
@@ -205,7 +206,7 @@ a:hover {
 }
 
 #homepage #app-tagline {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-family: Roboto, sans-serif;
 	font-weight: 100;
 	padding-top: 5vh;
