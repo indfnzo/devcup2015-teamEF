@@ -72,18 +72,12 @@
 	background-size: 100%;
 	opacity: 0.6;
 	transition: all 0.25s ease;
+	z-index: 1000;
 }
 
 #global-nav:hover #rainbow-band {
 	height: 5px;
 	opacity: 0.5;
-}
-
-.ui.placeholder.menu {
-	height: 8rem;
-	box-shadow: none;
-	border: none;
-	background: transparent;
 }
 
 /* global content styles */
@@ -111,12 +105,48 @@ a:hover {
 	font-size: 5rem;
 	font-weight: 100 !important;
 	font-family: Roboto;
+	text-shadow: 0px 1px 1px #000000;
 }
 
 .section.subheader {
 	font-weight: 900 !important;
 	font-size: 2rem;
 	text-align: left;
+}
+
+.sectionhead {
+	padding-top: 150px;
+}
+
+.consult.sectionhead {
+	background: url("../images/bg1.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.shout.sectionhead {
+	background: url("../images/bg2.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.inspire.sectionhead {
+	background: url("../images/bg3.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+.compose.sectionhead {
+	background: url("../images/bg4.png") no-repeat scroll 0% 0%;
+	background-size: 100%;
+}
+
+/* homepage styles */
+
+#homepage section {
+	min-height: 100vh;
+}
+
+#homepage .masthead {
+	background: url("../images/bgfinal.png") no-repeat;
+	background-size: cover;
 }
 
 .ui.dividing.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {

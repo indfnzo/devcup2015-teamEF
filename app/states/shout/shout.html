@@ -1,40 +1,38 @@
-<div class="ui text container">
-	<span class="section header">Shout</span >
-	<div class="section subheader">Have hope for better days.</div><br>
-	<span class="section content">
-	   Release all your negative feelings of affliction, announce accomplished milestones, get to know other people’s point of view on what you think, discover what other people are going through an online chat shout out. This allows everyone to channel their brooding regrets, gloomy states, disappointment about society and personal miseries; get all of this out of their chest.
-	   <br><br>
-	   Shout resets every 6am, a sign that it is a new day! A great day to remove hate, a chance to forgive yourself and others, and to be happier everyday.
-	</span>
-	<div class="ui form segment">
-		<div class="field">
-			<input type="text" ng-model="shout.author" placeholder="Your alias/display name" requirec>
+<div class="shout sectionhead">
+	<div class="ui text container">
+		<span class="section header">Shout</span >
+		<div class="section subheader">Have hope for better days.</div><br>
+		<span class="section content">
+		   Release all your negative feelings of affliction, announce accomplished milestones, get to know other people’s point of view on what you think, discover what other people are going through an online chat shout out. This allows everyone to channel their brooding regrets, gloomy states, disappointment about society and personal miseries; get all of this out of their chest.
+		   <br>
+		   Shout resets every 6am, a sign that it is a new day! A great day to remove hate, a chance to forgive yourself and others, and to be happier everyday.
+		</span>
+		<div class="ui form segment">
+			<div class="field">
+				<input type="text" ng-model="shout.author" placeholder="Your alias/display name" requirec>
+			</div>
+			<div class="field">
+				<textarea ng-model="shout.content" placeholder="How are you feeling today?"></textarea>
+			</div>
+			<div class="ui right aligned field container">
+				<button ng-click="submit()" class="ui large pink inverted submit labeled icon button">
+					<i class="announcement icon"></i> Shout
+				</button>
+			</div>
 		</div>
-		<div class="field">
-			<textarea ng-model="shout.content" placeholder="How are you feeling today?"></textarea>
-		</div>
-		<div class="ui right aligned field container">
-			<button ng-click="submit()" class="ui large pink inverted submit labeled icon button">
-				<i class="announcement icon"></i> Shout
-			</button>
-		</div>
-	</div>
-	<div class="ui segment item">
-		<div class="ui pink ribbon label">Upcoming Event</div>
-		<div class="section subheader">Meet Ups!Talks!Get to know us more!</div>
-		<div class="section content">Hope to see you there!</div>
-	</div>
-	<div id="shout-segment" class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
-		<div class="item">
-			<div class="content">
-				<p>{{ entry.content }}</p>
-				<div class="meta">
-					{{ entry.author }}
+
+		<div class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
+			<div class="item">
+				<div class="content">
+					<p>{{ entry.content }}</p>
+					<div class="meta">
+						{{ entry.author }}
+					</div>
 				</div>
 			</div>
 		</div>
+		<br><br>
 	</div>
-	<br><br>
 </div>
 
 <ui-view></ui-view>

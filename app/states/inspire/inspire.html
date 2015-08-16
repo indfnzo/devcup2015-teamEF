@@ -1,29 +1,31 @@
-<div class="ui text container">
-	<span class="section header">Inspire</span >
-	<div class="section subheader">Share your story today.</div><br>
-	<span class="section content">
-	    A collection of stories, opinions, and experiences that plant seeds of encouragement to the traumatized, afflicted, and confused. We may have different strengths and weaknesses, and facing trials might be different for each one. But knowing how other people overcame their challenges will strengthen the spirits of the LGBT. What you share today can save someone from their personal demons.
-	</span>
-	<div class="ui right aligned container">
-		<button ui-sref="compose" class="ui large pink inverted submit labeled icon button">
-			<i class="mail icon"></i>
-			Share Your Story
-		</button>
-	</div>
-	<div class="ui divider"></div>
-</div>
-
-<div class="ui text container">
-	<div class="ui segment" ng-repeat="entry in posts | orderBy:'id':'true'">
-		<a>{{ entry.title }}</a>
-		<span class="post meta">
-			{{	entry.author_name == "" || entry.author_gender == "" ?
-				entry.author_name + entry.author_gender : entry.author_name + ", " + entry.author_gender}}
+<div class="inspire sectionhead">
+	<div class="ui text container">
+		<span class="section header">Inspire</span >
+		<div class="section subheader">Share your story today.</div><br>
+		<span class="section content">
+		    A collection of stories, opinions, and experiences that plant seeds of encouragement to the traumatized, afflicted, and confused. We may have different strengths and weaknesses, and facing trials might be different for each one. But knowing how other people overcame their challenges will strengthen the spirits of the LGBT. What you share today can save someone from their personal demons.
 		</span>
+		<div class="ui right aligned container">
+			<button ui-sref="compose" class="ui large pink inverted submit labeled icon button">
+				<i class="mail icon"></i>
+				Share Your Story
+			</button>
+		</div>
 		<div class="ui divider"></div>
-		<p ng-bind-html="entry.content | format"></p>
 	</div>
-	<br><br><br>
+
+	<div class="ui text container">
+		<div class="ui segment" ng-repeat="entry in posts | orderBy:'id':'true'">
+			<a>{{ entry.title }}</a>
+			<span class="post meta">
+				{{	entry.author_name == "" || entry.author_gender == "" ?
+					entry.author_name + entry.author_gender : entry.author_name + ", " + entry.author_gender}}
+			</span>
+			<div class="ui divider"></div>
+			<p ng-bind-html="entry.content | format"></p>
+		</div>
+		<br><br><br>
+	</div>
 </div>
 
 <ui-view></ui-view>
