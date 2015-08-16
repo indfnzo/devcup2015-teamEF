@@ -142,6 +142,11 @@ a:hover {
 	background-size: 100%;
 }
 
+#global-footer {
+	background: #D83060;
+	color: #FFFFFF;
+}
+
 /* homepage styles */
 
 #homepage section {
