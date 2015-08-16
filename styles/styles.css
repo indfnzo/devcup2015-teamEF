@@ -4,6 +4,7 @@
 #global-nav {
 	background: rgba(255,255,255,0.95);
 	border-bottom: 1px solid rgba(0,0,0,0.5);
+	overflow: hidden;
 }
 
 #global-nav .ui.basic.button {
@@ -24,13 +25,35 @@
 	transition: all 0.15s ease;
 }
 
-#global-nav.ui.secondary.menu a.item:not(.header).active,
-#global-nav.ui.secondary.menu a.item:not(.header):hover {
+#global-nav.ui.secondary.menu a.item:not(.header).active {
 	color: #FF66CC;
 }
 
-#global-nav.ui.secondary.menu a.item.header {
-	border: none;
+#global-nav.ui.secondary.menu a.item:not(.header) {
+	position: relative;
+	transition: all 0.1s ease;
+}
+
+#global-nav.ui.secondary.menu a.item:not(.header):hover {
+	color: #FFFFFF;
+	font-weight: 900;
+}
+
+#global-nav.ui.secondary.menu a.item:not(.header) img.bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100px;
+	width: auto;
+	transform: translateX(-50%) translateY(-50%) scale(0.5) rotateZ(30deg);
+	z-index: -1000;
+	opacity: 0;
+	transition: all 0.1s ease;
+}
+
+#global-nav.ui.secondary.menu a.item:not(.header):hover img.bg {
+	transform: translateX(-50%) translateY(-50%) scale(1.5) rotateZ(0deg);
+	opacity: 0.75;
 }
 
 #global-nav.ui.secondary.menu a.item.header img {
@@ -60,9 +83,15 @@
 	height: 8rem;
 	box-shadow: none;
 	border: none;
+	background: transparent;
 }
 
 /* global content styles */
+
+body {
+	background: #FAFAFA;
+}
+
 a, a:hover {
 	color: #FF66CC;
 }
