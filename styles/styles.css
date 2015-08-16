@@ -76,3 +76,17 @@ a:hover {
 	color: #808080;
 	font-size: 0.8rem;
 }
+
+.section.header {
+	color: #FF66CC;
+	font-size: 5rem;
+	font-weight: 100 !important;
+	font-family: Roboto;
+}
+
+.section.subheader {
+	font-weight: 900 !important;
+	font-size: 2rem;
+	text-align: left;
+}
+

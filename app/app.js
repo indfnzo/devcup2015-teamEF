@@ -23,7 +23,7 @@
 		$urlRouterProvider.otherwise("/");
 
 		// configure Restangular
-		RestangularProvider.setBaseUrl("api/v1");
+		RestangularProvider.setBaseUrl("api/v1/index.php");
 		RestangularProvider.setJsonp(true);
 		RestangularProvider.setDefaultRequestParams("jsonp", {callback: "JSON_CALLBACK"});
 	});
