@@ -25,8 +25,16 @@
 		$scope.lastShout = 0;
 		$scope.shouts = [];
 
-		// function for fetching new content and appending them to store
+		// resync cycle that runs every 5s
 		function beginResyncCycle() {
+			// clear store if database has already been flushed
+			Restangular.all("shouts").getList().then(function(new_shouts) {
+				// replace store with new shouts
+				// (supposedly empty unless a person submits in between resyncs)
+				$scope.shouts = new_shouts;
+			});
+
+			// fetch new content and append them to store
 			Restangular.all("new_shouts/" + $scope.lastShout).getList().then(function(new_shouts) {
 				// append all new shouts to store
 				$scope.shouts.push.apply($scope.shouts, new_shouts);
@@ -63,6 +71,9 @@
 			alias = $scope.shout["author"];
 			$scope.shout = {};
 			$scope.shout["author"] = alias;
+
+			// force resync
+			beginResyncCycle();
 		};
 	});
 })();
