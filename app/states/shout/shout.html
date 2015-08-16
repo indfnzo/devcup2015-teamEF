@@ -1,35 +1,32 @@
-<div class="ui grid centered container">
-	<div class="row">
-		<div class="fourteen wide column">
-			<div class="ui form segment">
-				<div class="field">
-					<textarea ng-model="shout.content" placeholder="How are you feeling today?"></textarea>
-				</div>
-				<div class="two fields">
-					<div class="field">
-						<input type="text" ng-model="shout.author" placeholder="Alias">
-					</div>
-					<div class="field">
-						<div ng-click="submit()" class="ui blue submit button">Shout</div>
-					</div>
+<div class="ui text container">
+	<h1>Submit Your Story</h1>
+	<h4>Been through blah blah? and blah blah</h4>
+	<h4>Inspire someone and blah blah blah. Submit your story below to blah blah blah</h4>
+	<div class="ui form segment">
+		<div class="field">
+			<input type="text" ng-model="shout.author" placeholder="Your alias/display name" requirec>
+		</div>
+		<div class="field">
+			<textarea ng-model="shout.content" placeholder="How are you feeling today?"></textarea>
+		</div>
+		<div class="ui right aligned field container">
+			<button ng-click="submit()" class="ui large pink inverted submit labeled icon button">
+				<i class="announcement icon"></i> Shout
+			</button>
+		</div>
+	</div>
+
+	<div class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
+		<div class="item">
+			<div class="content">
+				<p>{{ entry.content }}</p>
+				<div class="meta">
+					{{ entry.author }}
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="fourteen wide column">
-			<div class="ui items segment" ng-repeat="entry in shouts | orderBy:'id':'true'">
-				<div class="item">
-					<div class="content">
-						<p>{{ entry.content }}</p>
-						<div class="meta">
-							{{ entry.author }}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<br><br>
 </div>
 
 <ui-view></ui-view>
